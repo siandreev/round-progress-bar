@@ -1,0 +1,93 @@
+@import "../variables";
+
+$input_width: 40px;
+$input_height: 24px;
+$circle_diameter: 20px;
+$padding: ($input_height - $circle_diameter) / 2;
+$translateX: ($input_width - $circle_diameter) - 2 * $padding;
+
+.panel-wrapper {
+  margin: 0 auto;
+  width: $panel-height;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__row {
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  &__rounded-checkbox-input {
+    margin: 0 10px;
+    position: relative;
+    display: inline-block;
+    width: $input_width;
+    height: $input_height;
+    -webkit-tap-highlight-color:transparent;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      border-radius: $input_height;
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #4a4a4a;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: $circle_diameter;
+      width: $circle_diameter;
+      left: $padding;
+      bottom: $padding;
+      background-color: #d6d6d6;
+      transition: .4s;
+      border-radius: 50%;
+
+    }
+
+    input:checked + .slider {
+      background-color: #7cd020;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX($translateX);
+      background-color: #fbfcfc;
+    }
+  }
+
+  &__rounded-number-input {
+    margin: 0 10px;
+    input {
+      border-radius: $input_height;
+      border: 1px solid black;
+      width: $input_width - 3*$padding;
+      height: $input_height - 3*$padding;
+      outline: none;
+      text-align: center;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}

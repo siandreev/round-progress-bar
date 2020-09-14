@@ -1,0 +1,24 @@
+@import "variables";
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  position:absolute;
+  height: auto;
+  bottom:0;
+  top:0;
+  left:0;
+  right:0;
+  margin: $container-margin;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

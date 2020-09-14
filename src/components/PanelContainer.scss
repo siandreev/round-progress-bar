@@ -1,0 +1,15 @@
+@import "../variables";
+
+.panel-container {
+  &__row:nth-child(1){
+    flex: 1 1 auto;
+  }
+
+  &__row:nth-child(2){
+    flex: 0 0 $panel-height;
+  }
+
+  &__row:nth-child(3){
+    flex: 1.5 1 auto;
+  }
+}

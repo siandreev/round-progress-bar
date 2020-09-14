@@ -1,0 +1,192 @@
+/**
+  Margin around all content.
+ */
+/**
+  Circle size.
+ */
+/**
+  Circle border size.
+ */
+/**
+  Control panel size.
+ */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  position: absolute;
+  height: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.half-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/**
+  Margin around all content.
+ */
+/**
+  Circle size.
+ */
+/**
+  Circle border size.
+ */
+/**
+  Control panel size.
+ */
+.svg-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.svg-container__row:nth-child(1) {
+  flex: 7 1 auto;
+}
+.svg-container__row:nth-child(2) {
+  flex: 0 0 160px;
+}
+.svg-container__row:nth-child(2) svg {
+  display: block;
+  margin: 0 auto;
+  height: 160px;
+  width: 160px;
+}
+.svg-container__row:nth-child(3) {
+  flex: 1 1 auto;
+}
+.svg-container__circle {
+  stroke-width: 8px;
+  transform: rotate(-100grad);
+  transform-origin: 80px 80px;
+}
+.svg-container__circle:nth-child(1) {
+  stroke: #ecece9;
+  stroke-dasharray: 101 100;
+}
+.svg-container__circle:nth-child(2) {
+  stroke: #feda4d;
+  stroke-dasharray: 30 100;
+}
+
+/**
+  Margin around all content.
+ */
+/**
+  Circle size.
+ */
+/**
+  Circle border size.
+ */
+/**
+  Control panel size.
+ */
+.panel-container__row:nth-child(1) {
+  flex: 1 1 auto;
+}
+.panel-container__row:nth-child(2) {
+  flex: 0 0 120px;
+}
+.panel-container__row:nth-child(3) {
+  flex: 1.5 1 auto;
+}
+
+/**
+  Margin around all content.
+ */
+/**
+  Circle size.
+ */
+/**
+  Circle border size.
+ */
+/**
+  Control panel size.
+ */
+.panel-wrapper {
+  margin: 0 auto;
+  width: 120px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.panel-wrapper__row {
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.panel-wrapper__rounded-checkbox-input {
+  margin: 0 10px;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  -webkit-tap-highlight-color: transparent;
+}
+.panel-wrapper__rounded-checkbox-input input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.panel-wrapper__rounded-checkbox-input .slider {
+  border-radius: 24px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4a4a4a;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.panel-wrapper__rounded-checkbox-input .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #d6d6d6;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.panel-wrapper__rounded-checkbox-input input:checked + .slider {
+  background-color: #7cd020;
+}
+.panel-wrapper__rounded-checkbox-input input:checked + .slider:before {
+  transform: translateX(16px);
+  background-color: #fbfcfc;
+}
+.panel-wrapper__rounded-number-input {
+  margin: 0 10px;
+}
+.panel-wrapper__rounded-number-input input {
+  border-radius: 24px;
+  border: 1px solid black;
+  width: 34px;
+  height: 18px;
+  outline: none;
+  text-align: center;
+}
+.panel-wrapper__rounded-number-input input::-webkit-outer-spin-button,
+.panel-wrapper__rounded-number-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

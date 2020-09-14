@@ -1,0 +1,43 @@
+@import "../variables";
+
+.svg-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &__row:nth-child(1){
+    flex: 7 1 auto;
+  }
+
+  &__row:nth-child(2){
+    flex: 0 0 $diameter;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      height: $diameter;
+      width: $diameter;
+    }
+  }
+
+  &__row:nth-child(3){
+    flex: 1 1 auto;
+  }
+
+  &__circle {
+    stroke-width: $stroke-width;
+    transform: rotate(-100grad);
+    transform-origin: $diameter/2 $diameter/2;
+  }
+
+  &__circle:nth-child(1) {
+    stroke: #ecece9;
+    stroke-dasharray: 101 100;
+  }
+
+  &__circle:nth-child(2) {
+    stroke: #feda4d;
+    stroke-dasharray: 30 100;
+  }
+
+}
