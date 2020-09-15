@@ -28,6 +28,10 @@
     stroke-width: $stroke-width;
     transform: rotate(-100grad);
     transform-origin: $diameter/2 $diameter/2;
+
+    &_hidden {
+      visibility: hidden;
+    }
   }
 
   &__circle:nth-child(1) {
@@ -37,7 +41,7 @@
 
   &__circle:nth-child(2) {
     stroke: #feda4d;
-    stroke-dasharray: 30 100;
+    stroke-dasharray: 50 100;
   }
 
 }

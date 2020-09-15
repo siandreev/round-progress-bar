@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="progress">
     <div class="half-container svg-container">
       <div class="svg-container__row"></div>
       <div class="svg-container__row">
-        <svg>
+        <svg id="circles_canvas">
           <circle class="svg-container__circle" cx="80" cy="80" r="70" fill="none" pathLength="100"/>
-          <circle id="circle_bar" class="svg-container__circle" cx="80" cy="80" r="70" fill="none" pathLength="100"/>
+          <circle class="svg-container__circle" cx="80" cy="80" r="70" fill="none" pathLength="100"/>
         </svg>
       </div>
       <div class="svg-container__row"></div>
@@ -26,24 +26,30 @@
       <div class="panel-container__row">
         <div class="panel-wrapper">
           <div class="panel-wrapper__row">
-            <label class="panel-wrapper__rounded-number-input">
-              <input id="value_input" type="number" min="0" max="100">
-            </label>
-            <span>Value</span>
+            <div class="input">
+              <label id="value_label" class="input__rounded-number">
+                <input type="number" min="0" max="100" value="50">
+              </label>
+              <span class="input__text-content">Value</span>
+            </div>
           </div>
           <div class="panel-wrapper__row">
-            <label class="panel-wrapper__rounded-checkbox-input">
-              <input type="checkbox">
-              <span class="slider"></span>
-            </label>
-            <span>Animate</span>
+            <div class="input">
+              <label class="input__rounded-checkbox">
+                <input id="animate_input" type="checkbox">
+                <span class="input__slider"></span>
+              </label>
+              <span class="input__text-content">Animate</span>
+            </div>
           </div>
           <div class="panel-wrapper__row">
-            <label class="panel-wrapper__rounded-checkbox-input">
-              <input type="checkbox">
-              <span class="slider"></span>
-            </label>
-            <span>Hide</span>
+            <div class="input">
+              <label class="input__rounded-checkbox">
+                <input id="hide_input" type="checkbox">
+                <span class="input__slider"></span>
+              </label>
+              <span class="input__text-content">Hide</span>
+            </div>
           </div>
         </div>
       </div>
