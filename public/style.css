@@ -15,7 +15,7 @@ html, body {
   margin: 0;
 }
 
-.container {
+.progress {
   position: absolute;
   height: auto;
   bottom: 0;
@@ -24,15 +24,23 @@ html, body {
   right: 0;
   margin: 20px;
   display: flex;
-  flex-direction: column;
 }
 
 .half-container {
   display: flex;
-  flex-direction: column;
   flex: 1;
 }
 
+@media only screen and (orientation: portrait) {
+  .progress, .half-container {
+    flex-direction: column;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .progress, .half-container {
+    flex-direction: row;
+  }
+}
 /**
   Margin around all content.
  */
@@ -45,20 +53,17 @@ html, body {
 /**
   Control panel size.
  */
-.svg-container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
 .svg-container__row:nth-child(1) {
   flex: 7 1 auto;
 }
 .svg-container__row:nth-child(2) {
   flex: 0 0 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .svg-container__row:nth-child(2) svg {
   display: block;
-  margin: 0 auto;
   height: 160px;
   width: 160px;
 }
@@ -108,6 +113,9 @@ html, body {
 }
 .panel-container__row:nth-child(2) {
   flex: 0 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .panel-container__row:nth-child(3) {
   flex: 2 1 auto;
@@ -126,9 +134,8 @@ html, body {
   Control panel size.
  */
 .panel-wrapper {
-  margin: 0 auto;
   width: 120px;
-  height: 100%;
+  height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -137,6 +144,8 @@ html, body {
 .panel-wrapper__row {
   width: 100%;
   flex: 1 1 auto;
+  display: flex;
+  align-items: center;
 }
 
 .input {
@@ -177,6 +186,7 @@ html, body {
 }
 .input__slider_disabled {
   background-color: rgba(0, 0, 0, 0.1);
+  cursor: auto;
 }
 .input__slider:before {
   position: absolute;

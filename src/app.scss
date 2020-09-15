@@ -5,7 +5,7 @@ html, body {
   margin: 0;
 }
 
-.container {
+.progress {
   position:absolute;
   height: auto;
   bottom:0;
@@ -14,11 +14,21 @@ html, body {
   right:0;
   margin: $container-margin;
   display: flex;
-  flex-direction: column;
 }
 
 .half-container {
   display: flex;
-  flex-direction: column;
   flex: 1;
+}
+
+@media only screen and (orientation: portrait) {
+  .progress, .half-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .progress, .half-container {
+    flex-direction: row;
+  }
 }

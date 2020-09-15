@@ -3,20 +3,18 @@
 $animation_speed: 2s;
 
 .svg-container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-
   &__row:nth-child(1){
     flex: 7 1 auto;
   }
 
   &__row:nth-child(2){
     flex: 0 0 $diameter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     svg {
       display: block;
-      margin: 0 auto;
       height: $diameter;
       width: $diameter;
     }

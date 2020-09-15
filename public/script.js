@@ -1,10 +1,10 @@
 window.onload = function (){
-    const progress = new Progress();
+    const progress = new Progress("progress");
 }
 
 class Progress {
-    constructor() {
-        const progress = document.getElementById("progress");
+    constructor(id) {
+        const progress = document.getElementById(id);
 
         this.state = "Normal"
         this.circles = Array.from(progress.querySelectorAll(".svg-container__circle"));

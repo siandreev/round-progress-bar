@@ -46,6 +46,7 @@ $alpha_filter: 0.1;
 
     &_disabled {
       background-color: rgba(black, $alpha_filter);
+      cursor: auto;
     }
   }
 

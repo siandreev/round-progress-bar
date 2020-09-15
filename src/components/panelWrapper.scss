@@ -1,9 +1,8 @@
 @import "../variables";
 
 .panel-wrapper {
-  margin: 0 auto;
   width: $panel-height;
-  height: 100%;
+  height: $panel-height;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,5 +11,7 @@
   &__row {
     width: 100%;
     flex: 1 1 auto;
+    display: flex;
+    align-items: center;
   }
 }
