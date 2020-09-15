@@ -1,5 +1,7 @@
 @import "../variables";
 
+$animation_speed: 2s;
+
 .svg-container {
   display: flex;
   flex-direction: column;
@@ -32,6 +34,20 @@
     &_hidden {
       visibility: hidden;
     }
+
+    &_animated {
+      animation: rotate $animation_speed linear infinite;
+    }
+
+    @keyframes rotate  {
+      from {
+      }
+      to {
+        transform: rotate(300grad);
+        transform-origin: $diameter/2 $diameter/2;
+      }
+
+    }
   }
 
   &__circle:nth-child(1) {
@@ -43,5 +59,4 @@
     stroke: #feda4d;
     stroke-dasharray: 50 100;
   }
-
 }

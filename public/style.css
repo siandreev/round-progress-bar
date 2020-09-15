@@ -73,6 +73,15 @@ html, body {
 .svg-container__circle_hidden {
   visibility: hidden;
 }
+.svg-container__circle_animated {
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(300grad);
+    transform-origin: 80px 80px;
+  }
+}
 .svg-container__circle:nth-child(1) {
   stroke: #ecece9;
   stroke-dasharray: 101 100;

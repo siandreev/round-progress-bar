@@ -28,29 +28,41 @@ class Progress {
                 this.Show();
             }
         }
+
+        this.animateInput.onchange = () => {
+            if (this.animateInput.checked) {
+                this.EnableAnimation();
+            }
+            else {
+                this.DisableAnimation();
+            }
+        }
     }
 
     EnableAnimation() {
         if (this.state === "Normal")
         {
             this.state = "Animated";
-            // add animation
+            this.circles[1].classList.add("svg-container__circle_animated");
         }
     }
 
     DisableAnimation() {
         if (this.state === "Animated") {
             this.state = "Normal";
-            //remove animation
+            this.circles[1].classList.remove("svg-container__circle_animated");
         }
     }
 
     Hide() {
         this.state = "Hidden";
         this.circles.forEach(elem => elem.classList.add("svg-container__circle_hidden"));
+
         this.animateInput.checked = false;
         this.animateInput.disabled = true;
+        this.circles[1].classList.remove("svg-container__circle_animated");
         this.animateSlider.classList.add("input__slider_disabled");
+
         this.valueLabel.classList.add("input__rounded-number_disabled");
         this.valueInput.disabled = true;
     }
@@ -58,8 +70,10 @@ class Progress {
     Show() {
         this.state = "Normal";
         this.circles.forEach(elem => elem.classList.remove("svg-container__circle_hidden"));
+
         this.animateInput.disabled = false;
         this.animateSlider.classList.remove("input__slider_disabled");
+
         this.valueLabel.classList.remove("input__rounded-number_disabled");
         this.valueInput.disabled = false;
     }
