@@ -1,8 +1,9 @@
-window.onload = function (){
-    const progress = new Progress("progress");
-}
-
 class Progress {
+
+    /**
+     *
+     * @param {string} id   Id of the html progress block
+     */
     constructor(id) {
         const progress = document.getElementById(id);
 
@@ -78,3 +79,5 @@ class Progress {
         this.valueInput.disabled = false;
     }
 }
+
+export default Progress;

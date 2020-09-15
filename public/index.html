@@ -57,7 +57,11 @@
   </div>
 
 
-  <script src="script.js"></script>
+  <script type="module" src="./progress.js"></script>
+  <script type="module">
+    import Progress from "./progress.js";
+    const progress = new Progress("progress");
+  </script>
 </body>
 
 </html>
